@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+
+	<service>
+		<name>HelloWebservice</name>
+		<serviceClass>
+			com.xfire.webservice.IHelloWebservice
+		</serviceClass>
+		<implementationClass>
+			com.xfire.webservice.HelloWebserviceImpl
+		</implementationClass>
+		
+		<inHandlers>
+			<handler handlerClass = "com.xfire.authentication.AuthenticationHandler" />
+		</inHandlers>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service></beans>
